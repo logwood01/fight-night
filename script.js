@@ -9,9 +9,9 @@
      - Falls back to UFC CDN images, then initials
 ======================================================= */
 const USE_SERVER_IMAGES = true;
-const SERVER_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+const SERVER_URL = window.location.hostname === 'localhost'
   ? 'http://localhost:3001'
-  : '';
+  : window.location.origin;
 
 /* =======================================================
    FIGHT DATA

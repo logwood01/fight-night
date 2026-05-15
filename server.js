@@ -4,6 +4,12 @@
   Fetches UFC fighter images via SerpApi Google Images.
   Run with: node server.js
   Requires: .env file with SERPAPI_KEY=your_key_here
+
+  SECURITY — READ BEFORE EDITING:
+  NEVER log or return process.env.SERPAPI_KEY in any route.
+  API key is set via environment variables only (.env locally,
+  Render dashboard in production). It must never appear in any
+  response body, log line, or client-facing code.
 */
 
 require('dotenv').config();
@@ -22,11 +28,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 app.get('/test-key', (req, res) => {
-  const key = process.env.SERPAPI_KEY;
-  if (!key) {
-    return res.json({ found: false, preview: null });
-  }
-  res.json({ found: true, preview: key.substring(0, 5) });
+  res.json({ found: !!process.env.SERPAPI_KEY });
 });
 
 const PREFERRED_DOMAINS = [

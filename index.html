@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fight Night — Allen vs. Costa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <span class="logo-mark">⬡</span>
+        <span class="logo-text">APEX<span class="logo-thin">FIGHTS</span></span>
+      </div>
+      <nav class="header-nav">
+        <span>EVENTS</span>
+        <span>RANKINGS</span>
+        <span>NEWS</span>
+      </nav>
+      <button class="header-search" aria-label="Search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- EVENT HERO -->
+  <section class="event-hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="event-badge">FIGHT NIGHT · LAS VEGAS</div>
+      <h1 class="event-title">ALLEN <span class="vs-divider">VS</span> COSTA</h1>
+      <p class="event-meta">SAT · MAY 16 · 8:00 PM EDT · META APEX</p>
+    </div>
+  </section>
+
+  <!-- TAB BAR -->
+  <div class="tab-bar">
+    <button class="tab active">MAIN CARD</button>
+  </div>
+
+  <!-- FIGHT LIST -->
+  <main class="fight-list" id="main-card">
+    <!-- Cards injected by script.js -->
+  </main>
+
+  <!-- SCOUTING MODAL -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-inner" id="modal-inner"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
